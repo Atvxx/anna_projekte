@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Wirtschaftsinformatik{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/studiengaenge.css' %}">
+
+<div class="hero-section">
+    <img src="{% static 'img/wirtschaftsinformatik.jpg' %}" alt="WINF Studium" class="hero-image">
+    <div class="hero-content">
+        <h1 class="hero-title">WIRTSCHAFTSINFORMATIK</h1>
+        <div class="hero-subtitle">Bachelor of Science (B.Sc.)</div>
+    </div>
+</div>
+<div class="description-text">
+    IT und Wirtschaft wachsen immer stärker zusammen: Daten, Prozesse und Systeme müssen nicht nur funktionieren, sondern strategisch eingesetzt werden. <br> Im Studiengang Wirtschaftsinformatik erwerben Sie fundiertes Wissen über betriebliche Abläufe und die IT-Systeme, die diese unterstützen – von Datenbanken über Softwarearchitektur bis hin zu digitalen Geschäftsmodellen.
+</div>
+
+<!-- info box -->
+
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Abschluss</h5>
+                    <p class="card-text">Bachelor of Science (B.Sc.)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Anzahl Semester</h5>
+                    <p class="card-text">7 Semester</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Sprache</h5>
+                    <p class="card-text">Deutsch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Semesterbeitrag</h5>
+                    <p class="card-text">350€ pro Semester</p>
+                </div>
+            </div>
+        </div>
+
+<!-- bewertungs carousel -->
+<div class="container my-5">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Die Kombination aus Wirtschaft und Informatik bietet mir genau die richtige Balance. <br>Besonders spannend finde ich die Projektarbeiten, wo wir echte Business-Probleme mit IT-Lösungen angehen.<br> Die Praxisnähe durch Kooperationen mit Unternehmen ist wirklich wertvoll für meine berufliche Zukunft.</p>
+                    <p class="fw-bold text-end mb-0">Sarah Meyer, 5. Semester Wirtschaftsinformatik</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Was mich am meisten begeistert, ist die Vielseitigkeit des Studiums.<br> Von Programmierung über Datenbanken bis hin zu Geschäftsprozessen - wir lernen alle wichtigen Aspekte kennen. <br>Die Dozenten sind sehr engagiert und bringen aktuelle Themen wie KI und Big Data spannend ein.</p>
+                    <p class="fw-bold text-end mb-0">Max Weber, 7. Semester Wirtschaftsinformatik</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Der Mix aus Theorie und Praxis ist optimal. <br>Durch Projekte wie die Entwicklung einer Business-App oder die Analyse von Unternehmensprozessen können wir das Gelernte direkt anwenden.<br> Auch das internationale Umfeld und die Möglichkeit eines Auslandssemesters schätze ich sehr.</p>
+                    <p class="fw-bold text-end mb-0">Lisa Schmidt, 3. Semester Wirtschaftsinformatik</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="accordion accordion-flush" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Berufswelt und Perspektiven
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Der Studiengang Wirtschaftsinformatik bereitet Sie optimal auf eine zukunftsorientierte Karriere an der Schnittstelle von Betriebswirtschaft und Informationstechnologie vor. <br>Absolvent*innen sind gefragte Expert*innen, die in der Lage sind, komplexe Geschäftsprozesse zu analysieren und innovative IT-Lösungen zu konzipieren, zu entwickeln und zu implementieren.
+
+Typische Berufsfelder umfassen:
+
+<ul>
+    <li><strong>IT-Projektmanagement:</strong> Leitung und Koordination von IT-Projekten. <br></li>
+    <li><strong>IT-Consulting:</strong> Beratung von Unternehmen bei der Digitalisierung und Optimierung ihrer Geschäftsprozesse durch IT. <br></li>
+    <li><strong>Business Intelligence / Data Analytics:</strong> Analyse großer Datenmengen zur Ableitung strategischer Geschäftsentscheidungen. <br></li>
+    <li><strong>Softwareentwicklung / -architektur:</strong> Entwicklung von Unternehmenssoftware und Gestaltung von IT-Systemlandschaften. <br></li>
+    <li><strong>ERP-Systembetreuung (z.B. SAP):</strong> Implementierung, Anpassung und Wartung von Enterprise Resource Planning Systemen. <br></li>
+    <li><strong>IT-Security Management:</strong> Entwicklung und Implementierung von Sicherheitskonzepten. <br></li>
+    <li><strong>Prozessmanagement:</strong> Analyse und Optimierung von Geschäftsprozessen mit IT-Unterstützung. <br></li>
+    <li><strong>Produktmanagement (IT-Produkte):</strong> Konzeption und Steuerung der Entwicklung von Softwareprodukten.</li>
+</ul>
+
+Die Nachfrage nach Wirtschaftsinformatiker*innen ist branchenübergreifend hoch, von kleinen und mittleren Unternehmen (KMU) bis hin zu globalen Konzernen, in allen Sektoren wie Handel, Industrie, Finanzwesen, Logistik oder dem öffentlichen Dienst. <br>Der Abschluss qualifiziert Sie auch für weiterführende Masterstudiengänge.
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWINF" aria-expanded="false" aria-controls="collapseWINF">
+      Studienaufbau 
+    </button>
+  </h2>
+  <div id="collapseWINF" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      Das Bachelorstudium Wirtschaftsinformatik ist interdisziplinär aufgebaut und verbindet fundiertes Wissen aus der Informatik und der Betriebswirtschaftslehre. <br>
+      Es dauert in der Regel sieben Semester und schließt mit dem Bachelor of Science (B.Sc.) ab. <br>
+
+      <strong>Typische Studieninhalte (Beispiele):</strong>
+
+      <strong>Grundlagen (1.–3. Semester):</strong>
+      <ul>
+        <li><strong>Informatik:</strong> Programmierung (z. B. Python, Java), Datenbanken, Algorithmen und Datenstrukturen, Rechnernetze, Betriebssysteme.</li>
+        <li><strong>Betriebswirtschaftslehre:</strong> Grundlagen der BWL und VWL, Rechnungswesen, Marketing, Investition und Finanzierung, Unternehmensführung.</li>
+        <li><strong>Mathematik & Statistik:</strong> Lineare Algebra, Diskrete Mathematik, Deskriptive und Inferenzstatistik.</li>
+        <li><strong>Methodenkompetenz:</strong> Wissenschaftliches Arbeiten, Präsentationstechniken.</li>
+      </ul>
+
+      <strong>Vertiefung und Spezialisierung (4.–5. Semester):</strong>
+      <ul>
+        <li><strong>Wirtschaftsinformatik-Spezialthemen:</strong> Geschäftsprozessmanagement, ERP-Systeme (z. B. SAP), E-Business, IT-Recht, IT-Sicherheit, Projektmanagement.</li>
+        <li><strong>Anwendungsentwicklung:</strong> Web-Technologien, Mobile Applications, Software Engineering.</li>
+        <li><strong>Datenanalyse:</strong> Business Intelligence, Data Warehousing, Big Data, Machine Learning (Grundlagen).</li>
+        <li><strong>Wahlpflichtbereiche:</strong> Künstliche Intelligenz, Digital Marketing, Logistiksysteme, Cloud Computing, branchenspezifische Anwendungen.</li>
+      </ul>
+
+      <strong>Praxisphase (6. Semester):</strong>
+      <ul>
+        <li><strong>Praxissemester / Praktikum:</strong> Ein integriertes Praxissemester oder längeres Pflichtpraktikum in einem Unternehmen zur Anwendung theoretischer Kenntnisse.</li>
+        <li><strong>Projektarbeit:</strong> Entwicklung und Umsetzung praxisnaher IT-Projekte – häufig in Gruppen.</li>
+      </ul>
+
+      <strong>Abschluss (7. Semester):</strong>
+      <ul>
+        <li><strong>Bachelorarbeit:</strong> Wissenschaftliche Arbeit zu einem komplexen Thema aus der Wirtschaftsinformatik, häufig in Kooperation mit Unternehmen.</li>
+        <li><strong>Kolloquium:</strong> Präsentation und Verteidigung der Bachelorarbeit.</li>
+      </ul>
+
+      Das Studium legt besonderen Wert auf die Verzahnung von Theorie und Praxis – durch Fallstudien, Softwareprojekte, Laborübungen und Gastvorträge aus der Industrie.
+    </div>
+  </div>
+</div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Bewerbungsvoraussetzungen
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Für die Zulassung zum Bachelorstudiengang Wirtschaftsinformatik benötigen Sie mindestens die Fachhochschulreife oder eine gleichwertige Hochschulzugangsberechtigung.<br>
+
+<strong>Zusätzliche Voraussetzungen können sein:</strong>
+
+<ul>
+    <li><strong>Numerus Clausus (NC):</strong> Viele Hochschulen haben für Wirtschaftsinformatik einen Numerus Clausus, da der Studiengang beliebt ist. <br>Die genaue NC-Grenze variiert jedes Semester und hängt von der Anzahl der Bewerbungen und der zur Verfügung stehenden Studienplätze ab. <br></li>
+    <li><strong>Sprachkenntnisse:</strong> Für alle Bewerber*innen sind **Englischkenntnisse auf B2-Niveau nachweisbar** erforderlich oder stark empfohlen, da Teile der Fachliteratur und einzelne Lehrveranstaltungen auf Englisch sein können. <br>
+        <strong>Für internationale Bewerber*innen</strong> sind zusätzlich **Deutschkenntnisse von mindestens B2-Niveau nachweisbar** erforderlich, da der Großteil der Lehrveranstaltungen auf Deutsch stattfindet. <br></li>
+</ul>
+      </div>
+    </div>
+</div>
+
+ <!-- Bewerbungs-Button -->
+<div class="text-center mt-5">
+    <a href="{% url 'bewerbung' %}" class="btn btn-custom">Jetzt bewerben</a>
+</div>
+
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>Ihr Ansprechpartner im Studiengang Wirtschaftsinformatik</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <img src="{% static 'img/chris.jpg' %}" alt="Chris Lopes Salgueiro" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                            <h5 class="fw-bold mb-1">Chris Lopes Salgueiro</h5>
+                            <p class="text-muted">Studiengangsmanagement</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <h6 class="text-primary"><i class="bi bi-building me-2"></i>Position</h6>
+                                    <p class="ms-4">Studiengangsmanagement B.Sc. Wirtschaftsinformatik<br>
+                                    Fakultät für Wirtschaftsinformatik</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-geo-alt me-2"></i>Büro</h6>
+                                    <p class="ms-4">Gebäude B, Raum 3.25<br>
+                                    Campus Mitte</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-clock me-2"></i>Sprechzeiten</h6>
+                                    <p class="ms-4">Donnerstags 14:00 – 15:00 Uhr<br>
+                                    und nach Vereinbarung</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-telephone me-2"></i>Telefon</h6>
+                                    <p class="ms-4">+49 621 181-3442</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-envelope me-2"></i>E-Mail</h6>
+                                    <p class="ms-4">chris.lopessalgueiro@calm-university.de</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <h6 class="text-primary mb-2"><i class="bi bi-info-circle me-2"></i>Hinweis</h6>
+                                <p class="mb-0">Für Ihre Fragen zum Wirtschaftsinformatik-Studium stehe ich Ihnen gerne zur Verfügung.<br> Online-Beratungstermine können Sie bequem per E-Mail vereinbaren.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light p-3">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="mailto:chris.lopessalgueiro@calm-university.de" class="btn btn-custom btn-sm">
+                            <i class="bi bi-envelope-fill me-2"></i>E-Mail schreiben
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Top Uni Auszeichnung -->
+<div class="text-center mt-5 mb-5">
+    <img src="{% static 'img/topuni.png' %}" alt="Top Universität Auszeichnung" style="max-width: 150px; margin-bottom: 1.5rem;">
+    <p class="lead">Unsere Studierenden geben uns fünf Sterne</p>
+    <p class="h4 mb-3">⭐⭐⭐⭐⭐</p>
+    <p class="lead">Die International University CALM ist in zahlreichen Portalen zur „TOP Universität" gekürt worden.</p>
+</div>
+
+
+
+
+{% endblock %}

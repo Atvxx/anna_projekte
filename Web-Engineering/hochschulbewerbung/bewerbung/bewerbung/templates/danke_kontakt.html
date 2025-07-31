@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Kontaktanfrage eingegangen{% endblock %}
+{% block content %}
+{% load static %}
+
+<div class="container py-5">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+      <img src="{% static 'img/students.jpg' %}" alt="Kontaktanfrage eingegangen" class="img-fluid rounded-4 shadow" style="max-width: 600px;">
+    </div>
+    <div class="col-lg-6 text-lg-start text-center">
+      <h1 class="fw-bold mb-3" style="color: #0d3766; font-size: 3rem;">
+        Ihre Kontaktanfrage<br>ist eingegangen
+      </h1>
+      <p class="lead mb-4" style="color: #222; font-size: 1.5rem;">
+        Vielen Dank für Ihre Nachricht.<br>
+        Wir prüfen Ihr Anliegen und melden uns zeitnah mit weiteren Informationen.
+      </p>
+      <a href="{% url 'startseite' %}" class="btn btn-primary btn-lg px-4" style="background-color: #0d3766; border: none;">
+        Zur Startseite
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

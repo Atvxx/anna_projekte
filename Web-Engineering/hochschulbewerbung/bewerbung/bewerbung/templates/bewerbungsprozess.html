@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bewerbungsprozess.css' %}">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
+                        {% trans "Online-Bewerbung" %}
+                    </h2>
+                    <p class="text-center text-muted mb-4">
+                        Hier können Sie den Status Ihrer Bewerbung einsehen oder einen Statuscode anfordern.
+                    </p>
+                    <div class="d-grid gap-3">
+                        <a href="{% url 'status_check' %}" class="btn btn-primary btn-lg">
+                            <i class="bi bi-info-circle"></i> Status einsehen
+                        </a>
+                        <a href="{% url 'sende_statuscode' %}" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-key"></i> Statuscode anfordern
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <small class="text-muted">Bei Fragen wenden Sie sich bitte an unseren <a href="{% url 'kontakt' %}">Support</a>.</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

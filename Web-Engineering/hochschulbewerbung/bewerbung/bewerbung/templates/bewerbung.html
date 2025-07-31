@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Bewerbung{% endblock %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/custombutton.css' %}">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h2 class="card-title mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
+                        {% trans "Online-Bewerbung" %}
+                    </h2>
+                    <p class="text-muted mb-4">
+                        Bitte füllen Sie das folgende Formular sorgfältig aus. Pflichtfelder sind mit * gekennzeichnet.
+                    </p>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="{{ form.vorname.id_for_label }}" class="form-label">Vorname*</label>
+                            {{ form.vorname }}
+                            {% for error in form.vorname.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.nachname.id_for_label }}" class="form-label">Nachname*</label>
+                            {{ form.nachname }}
+                            {% for error in form.nachname.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.email.id_for_label }}" class="form-label">E-Mail*</label>
+                            {{ form.email }}
+                            {% for error in form.email.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.geburtsdatum.id_for_label }}" class="form-label">Geburtsdatum*</label>
+                            {{ form.geburtsdatum }}
+                            {% for error in form.geburtsdatum.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.studiengang.id_for_label }}" class="form-label">Studiengang*</label>
+                            {{ form.studiengang }}
+                            {% for error in form.studiengang.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.abschluss.id_for_label }}" class="form-label">Höchster Abschluss*</label>
+                            {{ form.abschluss }}
+                            {% for error in form.abschluss.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.sprachen.id_for_label }}" class="form-label">Sprachen*</label>
+                            {{ form.sprachen }}
+                            {% for error in form.sprachen.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.adresse.id_for_label }}" class="form-label">Adresse*</label>
+                            {{ form.adresse }}
+                            {% for error in form.adresse.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.telefon.id_for_label }}" class="form-label">Telefon*</label>
+                            {{ form.telefon }}
+                            {% for error in form.telefon.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.zeugnis.id_for_label }}" class="form-label">Zeugnis*</label>
+                            {{ form.zeugnis }}
+                            {% for error in form.zeugnis.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.kommentar.id_for_label }}" class="form-label">Kommentar</label>
+                            {{ form.kommentar }}
+                            {% for error in form.kommentar.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="mb-3 form-check">
+                            {{ form.einwilligung }}
+                            <label class="form-check-label" for="{{ form.einwilligung.id_for_label }}">
+                                {{ form.einwilligung.label }}
+                            </label>
+                            {% for error in form.einwilligung.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-sm mt-2 w-100">
+                            <i class="bi bi-send"></i> Bewerbung absenden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

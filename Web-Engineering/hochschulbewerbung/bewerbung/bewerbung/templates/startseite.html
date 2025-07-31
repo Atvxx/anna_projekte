@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Startseite{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/startseite.css' %}">
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="overlay"></div>
+  <div class="hero-content text-center">
+    <img src="{% static 'img/unilogo.png' %}" alt="Uni Logo" class="hero-logo mb-4">
+    <a href="{% url 'bewerbung' %}"  class="btn btn-custom">Bewirb dich jetzt</a>
+  </div>
+</section>
+
+<!-- Mission Statement Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text-Teil -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-uppercase mt-4" style="color: #003056;">Wie wir arbeiten</h6>
+        <h2 class="font-weight-bold" style="font-family: serif;">
+          Wir vereinen außergewöhnliche Ressourcen, engagierte Menschen und nachhaltige Werte – 
+          und wir fordern uns selbst heraus, ambitioniert zu sein und Erwartungen zu übertreffen.
+        </h2> 
+        <h6 class="text-uppercase mt-4" style="color: #003056;">Unsere Mission</h6>
+        <h2 class="font-weight-bold" style="font-family: serif;">
+          Wissenschaftliche Bildung auf höchstem Niveau mit gesellschaftlicher Relevanz zu verbinden. Dabei stehen exzellente Lehre, anwendungsbezogene Forschung und enge Zusammenarbeit mit Partnern aus Wirtschaft, Kultur und Gesellschaft im Zentrum unseres Handelns.
+        </h2>
+      </div>
+
+      <!-- Bild-Teil -->
+      <div class="col-md-6">
+        <img src="{% static 'img/Bib.jpg' %}" alt="Zusammenarbeit" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Campusumgebung / Lernumfeld -->
+<section class="py-5" style="background-color: #f7f7f7;">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h1 class="display-5" style="font-family: Georgia, serif;">
+          Eine Umgebung voller <em>Entfaltung</em>
+        </h1>
+        <p class="mt-4" style="font-size: 1.1rem;">
+          Unser Campus bietet den idealen Rahmen für eine inspirierende Lernatmosphäre. Moderne Gebäude, helle Räume und ruhige Lernzonen fördern eine effektive und persönliche Entwicklung.
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <!-- Karte 1 -->
+      <div class="col-md-4 mb-4">
+        <img src="{% static 'img/mensa.jpg' %}" class="img-fluid rounded shadow-sm mb-3" alt="Mensa">
+        <h5 class="text-uppercase"style="color: #003056;">Mensa & Lernbereich</h5>
+        <p>Moderne Mensa mit Lerninseln für gemeinsames Arbeiten und Austausch.</p>
+      </div>
+
+      <!-- Karte 2 -->
+      <div class="col-md-4 mb-4">
+        <img src="{% static 'img/Sitzplatz.png' %}" class="img-fluid rounded shadow-sm mb-3" alt="Campus">
+        <h5 class=" text-uppercase"style="color: #003056;">Campus & Außenbereiche</h5>
+        <p>Grüne Flächen und schattige Plätze fördern Konzentration und Erholung.</p>
+      </div>
+
+      <!-- Karte 3 -->
+      <div class="col-md-4 mb-4">
+        <img src="{% static 'img/Labor.png' %}" class="img-fluid rounded shadow-sm mb-3" alt="Kunst">
+        <h5 class="text-uppercase"style="color: #003056;">Kreativräume & Labore</h5>
+        <p>Räume für Kunst, Musik und Technik regen zum kreativen Denken an.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Warum wir -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-stretch">
+      
+      <!-- Linke Spalte mit Hintergrundbild hinter dem Text -->
+      <div class="col-md-6 p-4 d-flex" background-size: cover; background-position: center;>
+        <div class="text-black" style="background-color: rgba(0, 0, 0, 0); padding: 20px;">
+          <h2 class="text-uppercase" style="color: #003056;">Warum unsere Hochschule?</h2>
+          <p>
+            Weil Zukunft bei uns nicht nur gelehrt, sondern gelebt wird.<br>
+            Erleben Sie innovative Lehre, moderne und praxisnahe Studiengänge sowie persönliche Betreuung, die Sie wirklich weiterbringt.<br>
+            Werden Sie Teil einer lebendigen, vielfältigen Hochschulgemeinschaft – offen für neue Ideen, international vernetzt und mitten im Puls der Zeit.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rechte Spalte mit Bild -->
+      <div class="col-md-6">
+        <img src="{% static 'img/gebaeude.jpg' %}" alt="Studierende" class="img-fluid h-100 w-100 object-fit-cover rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Studienbereiche + Hovertext -->
+<section class="py-5" style="background-color: #f7f7f7;">
+  <div class="container">
+    <div class="row text-center">
+
+      <!-- Informatik -->
+      <div class="col-md-3 mb-4">
+        <div class="programm-box" style="background-image: url({% static 'img/Wirtschaftsinformatik.png' %});">
+          <div class="programm-overlay">
+            <h5>WIRTSCHAFTSINFORMATIK</h5>
+            <p>Bachelor</p>
+          </div>
+          <div class="hover-overlay">
+            <div class="hover-text">
+              Gestalten Sie die digitale Zukunft an der Schnittstelle von IT und Wirtschaft.
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BWL -->
+      <div class="col-md-3 mb-4">
+        <div class="programm-box" style="background-image: url({% static 'img/bwlkurs.png' %});">
+          <div class="programm-overlay">
+            <h5>BWL</h5>
+            <p>Bachelor</p>
+          </div>
+          <div class="hover-overlay">
+            <div class="hover-text">
+              Vertiefung in Strategie, Wirtschaftsethik und Leadership-Kompetenzen.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Psychologie -->
+      <div class="col-md-3 mb-4">
+        <div class="programm-box" style="background-image: url({% static 'img/psychologie.png' %});">
+          <div class="programm-overlay">
+            <h5>PSYCHOLOGIE</h5>
+            <p>Bachelor</p>
+          </div>
+          <div class="hover-overlay">
+            <div class="hover-text">
+              Verstehen Sie das menschliche Verhalten und begleiten Sie Veränderung
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medien -->
+      <div class="col-md-3 mb-4">
+        <div class="programm-box" style="background-image: url({% static 'img/digitalbusinessmanagement.png' %});">
+          <div class="programm-overlay">
+            <h5>DBM</h5>
+            <p>Master</p>
+          </div>
+          <div class="hover-overlay">
+            <div class="hover-text">
+              Führen Sie Unternehmen durch digitale Transformation mit Strategie, Technik und Innovation.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button zentriert -->
+    <div class="text-center mt-4">
+      <a href="{% url 'studiengaenge' %}" class="btn btn-custom">
+        Studiengänge entdecken
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
+
+  

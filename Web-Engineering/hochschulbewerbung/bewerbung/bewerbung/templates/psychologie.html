@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Psychologie{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/studiengaenge.css' %}">
+<div class="hero-section">
+    <img src="{% static 'img/psychologie.jpg' %}" alt="Psychologie Studium" class="hero-image">
+    <div class="hero-content">
+        <h1 class="hero-title">PSYCHOLOGIE</h1>
+        <div class="hero-subtitle">Bachelor of Science (B.Sc.)</div>
+    </div>
+</div>
+<div class="description-text">
+    Die Psychologie erforscht das menschliche Erleben und Verhalten. <br>Unser neuer Bachelorstudiengang Psychologie an der International University CALM ist brandneu konzipiert – wissenschaftlich aktuell und zukunftsorientiert.
+<br><br>
+In unserem Psychologie-Studium erwerben Sie fundierte Kenntnisse in den Bereichen Kognition, Emotion, Persönlichkeit und Diagnostik – wissenschaftlich fundiert und praxisnah zugleich.
+</div>
+
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Abschluss</h5>
+                    <p class="card-text">Bachelor of Science (B.Sc.)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Anzahl Semester</h5>
+                    <p class="card-text">7 Semester</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Sprache</h5>
+                    <p class="card-text">Deutsch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Semesterbeitrag</h5>
+                    <p class="card-text">350€ pro Semester</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- bewertungs carousel -->
+<div class="container my-5">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Psychologie zu studieren bedeutet für mich, den Menschen besser zu verstehen. <br> Besonders gefallen mir die praxisnahen Übungen und Fallanalysen.</p>
+                    <p class="fw-bold text-end mb-0">Lea Wagner, 5. Semester Psychologie</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Das Studium gibt mir das Handwerkszeug, um später im klinischen Bereich professionell zu helfen.<br>Ich finde die Kombination aus Theorie und Praxis sehr gelungen.</p>
+                    <p class="fw-bold text-end mb-0">Jonas Reimann, 6. Semester Psychologie</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="accordion accordion-flush" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Berufswelt und Perspektiven
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Der Studiengang Psychologie qualifiziert Sie für vielseitige Tätigkeiten in Forschung, klinischer Praxis, Beratung und Wirtschaft. <br>Absolvent*innen verfügen über ein fundiertes Verständnis menschlichen Erlebens und Verhaltens und sind in der Lage, psychologische Methoden wissenschaftlich und praktisch anzuwenden.
+
+Typische Berufsfelder umfassen:
+
+<ul>
+    <li><strong>Klinische Psychologie:</strong> Diagnostik und Therapie psychischer Störungen in Kliniken und Praxen. <br></li>
+    <li><strong>Gesundheitspsychologie:</strong> Prävention, Stressbewältigung und Gesundheitsförderung. <br></li>
+    <li><strong>Wirtschaftspsychologie:</strong> Personalentwicklung, Arbeitszufriedenheit, Organisationsberatung. <br></li>
+    <li><strong>Forschung und Lehre:</strong> Universitäten, Forschungsinstitute, empirische Studien. <br></li>
+    <li><strong>Pädagogische Psychologie:</strong> Förderung von Lernprozessen in Schulen und Bildungseinrichtungen. <br></li>
+    <li><strong>Rechtspsychologie:</strong> Gutachtenerstellung, forensische Diagnostik. <br></li>
+    <li><strong>Beratung und Coaching:</strong> Individuelle Begleitung bei beruflichen und privaten Herausforderungen.</li>
+</ul>
+
+Ein erfolgreicher Abschluss qualifiziert Sie für weiterführende Masterprogramme sowie perspektivisch für die Approbation (z. B. im Master Klinische Psychologie und Psychotherapie).
+      </div>
+    </div>
+  </div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePsych" aria-expanded="false" aria-controls="collapsePsych">
+      Studienaufbau – Psychologie
+    </button>
+  </h2>
+  <div id="collapsePsych" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      Das Bachelorstudium Psychologie ist wissenschaftlich-theoretisch und methodenorientiert aufgebaut. <br>
+      Es dauert in der Regel sieben Semester und schließt mit dem Bachelor of Science (B.Sc.) ab. <br>
+
+      <strong>Typische Studieninhalte (Beispiele):</strong>
+
+      <strong>Grundlagen (1.–3. Semester):</strong>
+      <ul>
+        <li><strong>Allgemeine Psychologie:</strong> Wahrnehmung, Lernen, Gedächtnis, Emotion.</li>
+        <li><strong>Biologische Psychologie:</strong> Neurobiologische Grundlagen menschlichen Verhaltens.</li>
+        <li><strong>Entwicklungspsychologie:</strong> Psychologische Entwicklung über die Lebensspanne.</li>
+        <li><strong>Sozialpsychologie & Persönlichkeitspsychologie:</strong> Verhalten in Gruppen, Persönlichkeitsmodelle.</li>
+        <li><strong>Methodenlehre & Statistik:</strong> Forschungsmethoden, Datenerhebung, SPSS, Statistik I–II.</li>
+      </ul>
+
+      <strong>Vertiefung (4.–5. Semester):</strong>
+      <ul>
+        <li><strong>Klinische Psychologie:</strong> Grundlagen psychischer Störungen und Therapieformen.</li>
+        <li><strong>Diagnostik & Testverfahren:</strong> Testentwicklung, Testauswertung.</li>
+        <li><strong>Arbeits- & Organisationspsychologie:</strong> Motivation, Führung, Arbeitszufriedenheit.</li>
+        <li><strong>Wahlpflichtbereiche:</strong> Pädagogische Psychologie, Gesundheitspsychologie, Rechtspsychologie.</li>
+      </ul>
+
+      <strong>Praxisphase (6. Semester):</strong>
+      <ul>
+        <li><strong>Pflichtpraktikum:</strong> Mind. 8 Wochen in Kliniken, Unternehmen oder Forschungseinrichtungen.</li>
+        <li><strong>Projektarbeit:</strong> Anwendung psychologischer Methoden im Praxiskontext.</li>
+      </ul>
+
+      <strong>Abschluss (7. Semester):</strong>
+      <ul>
+        <li><strong>Bachelorarbeit:</strong> Empirische Arbeit zu einem psychologischen Thema mit wissenschaftlicher Methodik.</li>
+        <li><strong>Kolloquium:</strong> Verteidigung der Bachelorarbeit.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      Bewerbungsvoraussetzungen
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      Für die Zulassung zum Bachelorstudiengang Psychologie benötigen Sie mindestens die Fachhochschulreife oder eine gleichwertige Hochschulzugangsberechtigung.<br>
+
+<strong>Zusätzliche Voraussetzungen können sein:</strong>
+
+<ul>
+    <li><strong>Numerus Clausus (NC):</strong> Aufgrund der hohen Nachfrage liegt der NC für Psychologie häufig bei ca. 1,2. <br>Die genaue NC-Grenze variiert jedes Semester und hängt von der Anzahl der Bewerbungen und der zur Verfügung stehenden Studienplätze ab. <br></li>
+    <li><strong>Sprachkenntnisse:</strong> Für alle Bewerber*innen sind <strong>Englischkenntnisse auf B2-Niveau</strong> erforderlich oder stark empfohlen, da Teile der Fachliteratur und einzelne Lehrveranstaltungen auf Englisch stattfinden können. <br>
+        <strong>Für internationale Bewerber*innen</strong> sind zusätzlich <strong>Deutschkenntnisse auf mindestens B2-Niveau</strong> nachzuweisen, da der Großteil der Lehrveranstaltungen auf Deutsch stattfindet. <br></li>
+</ul>
+
+Bitte beachten Sie, dass die genauen Zulassungsvoraussetzungen je nach Hochschule variieren können. <br>Informieren Sie sich daher stets auf der <strong>offiziellen Webseite der Hochschule</strong>, an der Sie sich bewerben möchten, über die aktuell gültigen Bedingungen und Fristen.
+    </div>
+  </div>
+</div>
+
+
+<!-- Bewerbungs-Button -->
+<div class="text-center mt-5">
+    <a href="{% url 'bewerbung' %}" class="btn btn-custom">Jetzt bewerben</a>
+</div>
+
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>Ihre Ansprechpartnerin im Studiengang Psychologie</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <img src="{% static 'img/lia.jpg' %}" alt="Celia Meißner" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                            <h5 class="fw-bold mb-1">Celia Meißner</h5>
+                            <p class="text-muted">Studiengangsmanagement</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <h6 class="text-primary"><i class="bi bi-building me-2"></i>Position</h6>
+                                    <p class="ms-4">Studiengangsmanagement B.Sc. Psychologie<br>
+                                    Fakultät für Psychologie</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-geo-alt me-2"></i>Büro</h6>
+                                    <p class="ms-4">Gebäude C, Raum 1.12<br>
+                                    Campus Mitte</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-clock me-2"></i>Sprechzeiten</h6>
+                                    <p class="ms-4">Mittwochs 12:30 – 14:30 Uhr<br>
+                                    und nach Vereinbarung</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-telephone me-2"></i>Telefon</h6>
+                                    <p class="ms-4">+49 621 181-3310</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-envelope me-2"></i>E-Mail</h6>
+                                    <p class="ms-4">celia.meissner@calm-university.de</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <h6 class="text-primary mb-2"><i class="bi bi-info-circle me-2"></i>Hinweis</h6>
+                                <p class="mb-0">Für Ihre Fragen zum Psychologie-Studium stehe ich Ihnen gerne zur Verfügung.<br> Online-Beratungstermine können Sie bequem per E-Mail vereinbaren.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light p-3">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="mailto:celia.meissner@calm-university.de" class="btn btn-custom btn-sm">
+                            <i class="bi bi-envelope-fill me-2"></i>E-Mail schreiben
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Top Uni Auszeichnung -->
+<div class="text-center mt-5 mb-5">
+    <img src="{% static 'img/topuni.png' %}" alt="Top Universität Auszeichnung" style="max-width: 150px; margin-bottom: 1.5rem;">
+    <p class="lead">Unsere Studierenden geben uns fünf Sterne</p>
+    <p class="h4 mb-3">⭐⭐⭐⭐⭐</p>
+    <p class="lead">Die International University CALM ist in zahlreichen Portalen zur „TOP Universität" gekürt worden.</p>
+</div>
+
+
+{% endblock %}

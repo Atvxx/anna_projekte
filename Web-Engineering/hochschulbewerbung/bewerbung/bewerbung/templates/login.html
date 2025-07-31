@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% load static %}
+<div class="container py-5 d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+  <div class="p-5 rounded-4 shadow" style="background: #fff; max-width: 400px; width: 100%;">
+    <div class="text-center mb-4">
+      <img src="{% static 'img/unilogo.png' %}" alt="International University CALM" style="max-width: 120px;">
+      <h2 class="fw-bold mt-3" style="color: #0d3766;">Anmelden</h2>
+      <p class="mb-0" style="color: #444;">Anmelden bei International University CALM</p>
+    </div>
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="username" class="form-label fw-semibold">Benutzername</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Benutzername" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label fw-semibold">Passwort</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Passwort" required>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary fw-bold" style="background:#0d3766; border:none;">Anmelden</button>
+      </div>
+    </form>
+{% endblock %}

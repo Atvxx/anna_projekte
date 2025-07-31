@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Betriebswirtschaftslehre{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/studiengaenge.css' %}">
+<div class="hero-section">
+    <img src="{% static 'img/betriebswirtschaftslehre.jpg' %}" alt="BWL Studium" class="hero-image">
+    <div class="hero-content">
+        <h1 class="hero-title">BETRIEBSWIRTSCHAFTSLEHRE</h1>
+        <div class="hero-subtitle">Bachelor of Arts (B.A.)</div>
+    </div>
+</div>
+<div class="description-text">
+    Unternehmen müssen wirtschaftlich denken und gleichzeitig flexibel handeln – im globalen Wettbewerb mehr denn je.<br> Im BWL-Studium lernen Sie, wie Unternehmen funktionieren: von Finanzierung und Marketing über Controlling bis hin zu Strategie und Organisation – praxisnah und analytisch zugleich.
+</div>
+
+
+<!-- Info Box -->
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Abschluss</h5>
+                    <p class="card-text">Bachelor of Arts (B.A.)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Anzahl Semester</h5>
+                    <p class="card-text">6 Semester</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Sprache</h5>
+                    <p class="card-text">Deutsch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-uppercase fw-bold text-primary mb-3">Semesterbeitrag</h5>
+                    <p class="card-text">350€ pro Semester</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+ * Generiert mit: Copilot
+ * Qualität: Sehr gut - Ansprechende Darstellung von Erfahrungsberichten
+ * Treffgenauigkeit: Hoch - Authentische Testimonials
+ * Verbesserungspotential:
+ * - erfahrungsberichte ins backend integrieren und verbinden und durch das backend aktualisieren
+ * - Foto-Integration der Studierenden, die bewertet haben
+ * - Filter nach Semester/Studiengang, um gezielte Erfahrungsberichte anzuzeigen demnach extra 
+ eine Seite für Erfahrungsberichte erstellen
+-->
+<!-- bewertungs carousel -->
+<div class="container my-5">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">BWL eröffnet mir viele Perspektiven. <br>Besonders spannend finde ich die praxisnahen Fallstudien und die Einblicke in verschiedene Unternehmensbereiche. <br>So kann ich mein Wissen direkt anwenden und meine Karrierechancen verbessern.</p>
+                    <p class="fw-bold text-end mb-0">Lukas Müller, 4. Semester BWL</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Mir gefällt besonders die große Auswahl an Spezialisierungen. <br>Ob Marketing, Finanzen oder Personalmanagement – ich kann meinen individuellen Interessen nachgehen. <br>Auch die Projekte mit echten Unternehmen machen das Studium sehr lebendig.</p>
+                    <p class="fw-bold text-end mb-0">Julia Schmidt, 6. Semester BWL</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="border rounded p-4 m-4 bg-light">
+                    <p class="lead mb-4">Das BWL-Studium bietet eine perfekte Mischung aus Theorie und Praxis. <br>Gastvorträge, Exkursionen und Unternehmensprojekte helfen mir, wertvolle Kontakte zu knüpfen und mich optimal auf den Berufseinstieg vorzubereiten.</p>
+                    <p class="fw-bold text-end mb-0">David Becker, 5. Semester BWL</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="accordion accordion-flush" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Berufswelt und Perspektiven
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Der Studiengang Betriebswirtschaftslehre bereitet Sie optimal auf eine Karriere in nahezu allen Wirtschaftsbereichen vor. <br>Absolvent*innen sind gefragte Generalist*innen, die sowohl fundierte betriebswirtschaftliche Kenntnisse als auch wirtschaftliches Denken mitbringen und vielseitig einsetzbar sind.
+
+Typische Berufsfelder umfassen:
+
+<ul>
+    <li><strong>Marketing und Vertrieb:</strong> Entwicklung von Marketingstrategien und Betreuung von Kundenprojekten. <br></li>
+    <li><strong>Finanz- und Rechnungswesen:</strong> Buchhaltung, Controlling, Finanzplanung und Bilanzierung. <br></li>
+    <li><strong>Personalmanagement:</strong> Rekrutierung, Personalentwicklung und Organisationsgestaltung. <br></li>
+    <li><strong>Unternehmensberatung:</strong> Unterstützung von Unternehmen bei strategischen und operativen Fragestellungen. <br></li>
+    <li><strong>Logistik und Supply Chain Management:</strong> Planung und Steuerung von Lieferketten. <br></li>
+    <li><strong>Banken und Versicherungen:</strong> Kundenberatung, Risikomanagement, Kreditwesen. <br></li>
+    <li><strong>Start-ups und Entrepreneurship:</strong> Unternehmensgründung und -führung. <br></li>
+    <li><strong>Öffentlicher Dienst und NGOs:</strong> Verwaltung, Projektmanagement, Organisation.</li>
+</ul>
+
+Die Nachfrage nach BWL-Absolvent*innen ist branchenübergreifend hoch – von kleinen und mittleren Unternehmen bis hin zu globalen Konzernen in allen Wirtschaftssektoren. <br>Der Abschluss qualifiziert Sie auch für weiterführende Masterstudiengänge.
+      </div>
+    </div>
+  </div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBWL" aria-expanded="false" aria-controls="collapseBWL">
+      Studienaufbau 
+    </button>
+  </h2>
+  <div id="collapseBWL" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      Das Bachelorstudium Betriebswirtschaftslehre ist modular aufgebaut und vermittelt ein breites betriebswirtschaftliches Wissen.<br>
+      Es dauert in der Regel sechs Semester und schließt mit dem Bachelor of Arts (B.A.) oder Bachelor of Science (B.Sc.) ab.<br>
+
+      <strong>Typische Studieninhalte (Beispiele):</strong>
+
+      <strong>Grundlagen (1.–3. Semester):</strong>
+      <ul>
+        <li><strong>Allgemeine BWL:</strong> Grundlagen des Managements, Marketing, Rechnungswesen, Finanzierung.</li>
+        <li><strong>Volkswirtschaftslehre:</strong> Mikroökonomie, Makroökonomie.</li>
+        <li><strong>Recht:</strong> Wirtschaftsrecht, Arbeitsrecht, Vertragsrecht.</li>
+        <li><strong>Mathematik & Statistik:</strong> Wirtschaftsmathematik, Statistik.</li>
+        <li><strong>Methodenkompetenz:</strong> Wissenschaftliches Arbeiten, Präsentationstechniken.</li>
+      </ul>
+
+      <strong>Vertiefung und Spezialisierung (4.–5. Semester):</strong>
+      <ul>
+        <li><strong>Controlling:</strong> Kostenrechnung, Budgetierung, Kennzahlenanalyse.</li>
+        <li><strong>Marketing:</strong> Marktforschung, Markenmanagement, Vertrieb.</li>
+        <li><strong>Finanzmanagement:</strong> Investition, Finanzierung, Risikomanagement.</li>
+        <li><strong>Personalmanagement:</strong> Organisationsentwicklung, Führung.</li>
+        <li><strong>Wahlpflichtbereiche:</strong> Digitalisierung, Nachhaltigkeitsmanagement, International Business, Entrepreneurship.</li>
+      </ul>
+
+      <strong>Praxisphase (5. Semester):</strong>
+      <ul>
+        <li><strong>Praxissemester / Praktikum:</strong> Ein integriertes Pflichtpraktikum oder Praxissemester zur Anwendung des Gelernten in der Unternehmenspraxis.</li>
+        <li><strong>Projektarbeiten:</strong> Gruppenprojekte zur Förderung von Teamarbeit und praktischer Anwendung.</li>
+      </ul>
+
+      <strong>Abschluss (6. Semester):</strong>
+      <ul>
+        <li><strong>Bachelorarbeit:</strong> Eigenständige wissenschaftliche Arbeit zu einem betriebswirtschaftlichen Thema, häufig mit Praxisbezug.</li>
+        <li><strong>Kolloquium:</strong> Präsentation und Verteidigung der Bachelorarbeit.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      Bewerbungsvoraussetzungen
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        Für die Zulassung zum Bachelorstudiengang Betriebswirtschaftslehre benötigen Sie mindestens die Fachhochschulreife oder eine gleichwertige Hochschulzugangsberechtigung.<br>
+
+<strong>Zusätzliche Voraussetzungen können sein:</strong>
+
+<ul>
+    <li><strong>Numerus Clausus (NC):</strong> Da unser BWL-Studiengang sehr gefragt ist, liegt der Numerus Clausus bei 1,9.</li>
+    <li><strong>Sprachkenntnisse:</strong> Für alle Bewerber*innen werden <strong>Englischkenntnisse auf B2-Niveau</strong> empfohlen, da Teile der Fachliteratur sowie einzelne Veranstaltungen auf Englisch stattfinden können. <br>
+        <strong>Für internationale Bewerber*innen</strong> ist zusätzlich der Nachweis von <strong>Deutschkenntnissen auf mindestens B2-Niveau</strong> erforderlich, da das Studium überwiegend in deutscher Sprache durchgeführt wird. <br></li>
+</ul>
+    </div>
+  </div>
+</div>
+
+<!-- Downloads Bereich -->
+<div class="container mt-5">
+    <h4 class="mb-3">Downloads</h4>
+    <div class="text-start">
+        <a href="{% static 'pdf/bwlplan.pdf' %}" target="_blank" class="text-decoration-none d-inline-flex align-items-center">
+            <i class="bi bi-download text-primary me-2" style="font-size: 1.5rem;"></i>
+            <span style="font-size: 1.2rem;">Studienverlaufsplan</span>
+        </a>
+    </div>
+</div>
+
+<!-- Bewerbungs-Button -->
+<div class="text-center mt-5">
+    <a href="{% url 'bewerbung' %}" class="btn btn-custom">Jetzt bewerben</a>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>Ihre Ansprechpartnerin im Studiengang Betriebswirtschaftslehre</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <img src="{% static 'img/anna.jpg' %}" alt="Celia Schmidt" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                            <h5 class="fw-bold mb-1">Anna Taghavi Raof</h5>
+                            <p class="text-muted">Studiengangsmanagement</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <h6 class="text-primary"><i class="bi bi-building me-2"></i>Position</h6>
+                                    <p class="ms-4">Studiengangsmanagement B.A. Betriebswirtschaftslehre<br>
+                                    Fakultät für Betriebswirtschaftslehre</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-geo-alt me-2"></i>Büro</h6>
+                                    <p class="ms-4">Gebäude A, Raum 2.15<br>
+                                    Campus Mitte</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-clock me-2"></i>Sprechzeiten</h6>
+                                    <p class="ms-4">Dienstags 10:00 – 11:00 Uhr<br>
+                                    und nach Vereinbarung</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-telephone me-2"></i>Telefon</h6>
+                                    <p class="ms-4">+49 621 181-2442</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary"><i class="bi bi-envelope me-2"></i>E-Mail</h6>
+                                    <p class="ms-4">anna.taghaviraof@calm-university.de</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <h6 class="text-primary mb-2"><i class="bi bi-info-circle me-2"></i>Hinweis</h6>
+                                <p class="mb-0">Für Ihre Fragen zum BWL-Studium stehe ich Ihnen gerne zur Verfügung.<br> Kommt gerne zu meinen Sprechzeiten vorbei und wenn diese nicht passen sollten, schreibt mir gerne eine E-Mail. ;) <br> Für Online-Beratungstermine könnt Ihr mich auch gerne ansprechen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card-footer bg-light p-3">
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="mailto:anna.taghaviraof@calm-university.de" class="btn btn-custom btn-sm">
+                                <i class="bi bi-envelope-fill me-2"></i>E-Mail schreiben
+                            </a>
+                        </a>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Top Uni Auszeichnung -->
+<div class="text-center mt-5 mb-5">
+    <img src="{% static 'img/topuni.png' %}" alt="Top Universität Auszeichnung" style="max-width: 150px; margin-bottom: 1.5rem;">
+    <p class="lead">Unsere Studierenden geben uns fünf Sterne</p>
+    <p class="h4 mb-3">⭐⭐⭐⭐⭐</p>
+    <p class="lead">Die International University CALM ist in zahlreichen Portalen zur „TOP Universität" gekürt worden.</p>
+</div>
+
+
+{% endblock %}

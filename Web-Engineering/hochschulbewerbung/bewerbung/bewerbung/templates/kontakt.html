@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Kontakt{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/kontakt.css' %}">
+
+<div class="container my-5">
+    <div class="row align-items-center">
+        <!-- Logo/ Icon -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="{% static 'img/unilogo2.png' %}" alt="IUC Logo" style="max-width: 220px;">
+            <div class="text-muted mt-2" style="font-size: 0.9rem;">© International University CALM</div>
+        </div>
+        <!-- Adresse -->
+        <div class="col-md-5">
+            <h2 class="kontakt-title">Allgemeine Adresse</h2>
+            <div>
+                International University CALM<br>
+                Musterstraße 1<br>
+                12345 Musterstadt<br>
+                Telefon +49 421 218-1
+            </div>
+            <div class="mt-4">
+                <strong class="kontakt-subtitle d-block mb-1">Postanschrift</strong>
+                International University CALM<br>
+                Postfach 12 34 05<br>
+                12345 Musterstadt
+            </div>
+        </div>
+    </div>
+    <!-- Map in einer eigenen Zeile, zentriert und breiter -->
+    <div class="row justify-content-left">
+        <div class="col-md-8">
+            <div class="my-4">
+                <iframe
+                    src="https://www.google.com/maps?q=Sokratespl.+1,+24149+Kiel&output=embed"
+                    width="100%"
+                    height="350"
+                    style="border:0; border-radius:50px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+    <a href="{% static 'img/lageplan.png' %}" target="_blank" class="w-100 text-decoration-none">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h2 class="kontakt-title mb-2 fw-bold" style="font-size:2rem;">Lageplan</h2>
+            <div class="mb-2" style="text-align:left; color: #222;">
+                Mit dem Lageplan der International University CALM finden Sie schnell und einfach alle wichtigen Gebäude und Einrichtungen auf dem Campus... 
+                <br>
+                <br>
+                <strong class="text-hinweis">Klicken Sie, um mehr zu erfahren</strong>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+
+<!-- mit Copilot generiert:
+ * Die Idee für den blauen Balken oben als Design-Element
+ * Die Verwendung von rgba für den transparenten Hintergrund
+ Verbesserungsvorschläge:
+  * CSS in externe Datei auslagern:
+  *    - Styles nicht inline lassen
+  *    - wiederverwendbare Klassen erstellen-->
+<section class="py-4" style="background-color: transparent;">  <!-- Hier auf transparent geändert -->
+  <div style="height: 10px; background: #0d3766; border-radius: 8px 8px 0 0;"></div>
+  <div class="container py-4" style="background: rgba(13, 55, 102, 0.08); border-radius: 0 0 12px 12px;">
+    <h2 class="kontakt-info-title mb-3">Ihre Ansprechpartner:innen schnell finden</h2>
+    <p style="font-size: 1.15rem; color: #222;">
+      Direkt auf jeder Studiengangsseite der International University CALM finden Sie Ihre zuständige Ansprechperson mit Kontaktdaten und konkretem Aufgabenbereich.<br>
+      So wissen Sie immer, wer Ihnen bei Fragen zum Studienverlauf, zur Bewerbung oder zu Studieninhalten weiterhilft.
+    </p>
+    <p style="font-size: 1.15rem; color: #222;">
+      Für allgemeine oder andere Anliegen nutzen Sie bitte das Kontaktformular, Ihre Anfrage wird dann an die zuständige Stelle weitergeleitet.
+    </p>
+  </div>
+</section>
+
+
+
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="kontakt-title mb-4">Kontaktieren Sie uns</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="vorname" class="form-label">Vorname</label>
+                                <input type="text" name="vorname" id="vorname" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-Mail</label>
+                            <input type="email" name="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nachricht" class="form-label">Nachricht</label>
+                            <textarea name="nachricht" id="nachricht" rows="5" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="einwilligung" name="einwilligung" required>
+                            <label class="form-check-label" for="einwilligung">
+                                Ich stimme der <a href="{% static 'pdf/datenschutzerklärung.pdf' %}" target="_blank">Datenschutzerklärung</a> zu.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-sm">
+                            <i class="bi bi-envelope-fill me-2"></i>ABSENDEN
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

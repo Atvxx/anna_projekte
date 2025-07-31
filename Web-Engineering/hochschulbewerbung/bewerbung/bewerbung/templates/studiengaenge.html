@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block title %}Studiengänge{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/studiengang.css' %}">
+
+<!--
+nicht mit KI generiert, sondern von mir selbst erstellt.
+aber Verbesserungspotential: Bilder laden nur, wenn man sie sieht bzw. sie im Viewport sind.
+-->
+<div class="hero-section">
+  <div class="carousel-rounded">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/students2.jpg' %}" class="d-block w-100 banner-image" alt="Studierende 1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/wirtschaftsinformatik.jpg' %}" class="d-block w-100 banner-image" alt="Studierende 2">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/psychologie.jpg' %}" class="d-block w-100 banner-image" alt="Studierende 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="hero-content">
+    <h1 class="hero-title">UNSER <br>STUDIENANGEBOT</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <p class="lead mb-4">Unsere Hochschule bietet ein sorgfältig kuratiertes Studienangebot in verschiedenen zukunftsrelevanten Fachbereichen. <br>
+  Bei uns studieren Sie praxisnah, wissenschaftlich fundiert und mit exzellenter Betreuung.</p>
+  
+
+  <!-- Statistiken -->
+  <div class="row text-center mb-5">
+    <div class="col-md-4 stat-item">
+      <h3>4</h3>
+      <p>Studiengänge</p>
+    </div>
+    <div class="col-md-4 stat-item">
+      <h3>5000+</h3>
+      <p>Studierende</p>
+    </div>
+    <div class="col-md-4 stat-item">
+      <h3>40</h3>
+      <p>Lehrende</p>
+    </div>
+  </div>
+<div style="height: 10px;"></div>
+
+  <!-- Filter Bereich -->
+  <div class="bg-secondary bg-opacity-10 rounded p-4 mb-5">
+    <div class="row justify-content-start g-3">
+      <div class="col-md-3">
+        <label for="abschluss-filter" class="form-label">Abschluss</label>
+        <select class="form-select" id="abschluss-filter">
+          <option value="all">Alle Abschlüsse</option>
+          <option value="b">Bachelor</option>
+          <option value="m">Master</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="fachbereich-filter" class="form-label">Fachbereich</label>
+        <select class="form-select" id="fachbereich-filter">
+          <option value="all">Alle Fachbereiche</option>
+          <option value="wirtschaft">Wirtschaft</option>
+          <option value="informatik">Informatik</option>
+          <option value="humanwissenschaften">Humanwissenschaften</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+<!-- mit Copilot generiert:
+ * Die Idee für eine Hinweis-Karte mit farbigem Rand, Icon und erklärendem Text
+ * Funktionalität: Weist Nutzer:innen klar und optisch auffällig auf wichtige Sprachvoraussetzungen hin
+ * Treffsicherheit: Hoch – die Karte ist sofort sichtbar, das Icon unterstützt die Verständlichkeit
+ * Verbesserungsvorschläge:
+ *   - Farben und Formen komplett in CSS auslagern
+-->
+<div class="card mb-4" style="border: 2px solid #003366; border-radius: 10px;">
+  <div class="card-body d-flex align-items-center p-4">
+    <div class="me-3">
+      <svg style="width: 24px; height: 24px; color: #003366;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+      </svg>
+    </div>
+    <div>
+      <p class="card-text mb-0" style="color: #2c3e50;"> Für englischsprachige Programme ist ein Nachweis von mindestens C1 in Englisch einzureichen. <br>Bitte beachten Sie ebenfalls: Für die Zulassung zu deutschsprachigen Studiengängen ist für international students ein Nachweis über Deutschkenntnisse von B2 oder höher erforderlich.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="courses d-print-none">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 order-xl-6 order-md-2 order-1">
+      <h2 title="FINDEN SIE IHR STUDIUM" class="animated-heading">
+        <span class="d-none d-md-block">
+          FINDE <br>DEIN<br> STUDIUM <br>
+        </span>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<!-- Studiengänge -->
+<div class="row g-4" id="studiengaenge-container">
+  <div class="col-md-4 studiengang-item" data-abschluss="b" data-fachbereich="wirtschaft">
+    <div class="card h-100">
+      <img src="{% static 'img/betriebswirtschaftslehre.jpg' %}" class="card-img-top" alt="Studierende">
+      <div class="card-body">
+        <h5 class="card-title">Betriebswirtschaftslehre</h5>
+        <p class="card-text">Bachelor of Arts (B.A.)</p>
+        <a href="{% url 'bwl' %}" class="btn btn-custom">Erfahre mehr</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 studiengang-item" data-abschluss="b" data-fachbereich="informatik">
+    <div class="card h-100">
+      <img src="{% static 'img/wirtschaftsinformatik.jpg' %}" class="card-img-top" alt="Studierende">
+      <div class="card-body">
+        <h5 class="card-title">Wirtschaftsinformatik</h5>
+        <p class="card-text">Bachelor of Science (B.Sc.)</p>
+        <a href="{% url 'winfo' %}" class="btn btn-custom">Erfahre mehr</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-4 studiengang-item" data-abschluss="b" data-fachbereich="humanwissenschaften">
+    <div class="card h-100">
+      <img src="{% static 'img/psychologie.jpg' %}" class="card-img-top" alt="Studierende">
+      <div class="card-body">
+        <h5 class="card-title">Psychologie</h5>
+        <p class="card-text">Bachelor of Science (B.Sc.)</p>
+        <a href="{% url 'psychologie' %}" class="btn btn-custom">Erfahre mehr</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 studiengang-item" data-abschluss="m" data-fachbereich="wirtschaft">
+    <div class="card h-100">
+      <img src="{% static 'img/dbm.jpg' %}" class="card-img-top" alt="Studierende">
+      <div class="card-body">
+        <h5 class="card-title">Digital Business Management</h5>
+        <p class="card-text">Master of Arts (M.A.)</p>
+        <a href="{% url 'dbm' %}" class="btn btn-custom">Erfahre mehr</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--generiert mit: Copilot, quali: gut - funktionales Filtersystem, 
+verbesserungspotential: URL Parameter für Filter-Status und animierte Übergänge
+-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const abschlussSelect = document.getElementById('abschluss-filter');
+    const fachbereichSelect = document.getElementById('fachbereich-filter');
+    const items = document.querySelectorAll('.studiengang-item');
+    
+    function filterStudiengaenge() {
+        const selectedAbschluss = abschlussSelect.value;
+        const selectedFachbereich = fachbereichSelect.value;
+        
+        items.forEach(item => {
+            const matchesAbschluss = selectedAbschluss === 'all' || item.dataset.abschluss === selectedAbschluss;
+            const matchesFachbereich = selectedFachbereich === 'all' || item.dataset.fachbereich === selectedFachbereich;
+            
+            if (matchesAbschluss && matchesFachbereich) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    abschlussSelect.addEventListener('change', filterStudiengaenge);
+    fachbereichSelect.addEventListener('change', filterStudiengaenge);
+});
+</script>
+
+<!-- Top Uni Auszeichnung -->
+<div class="text-center mt-5 mb-5">
+    <img src="{% static 'img/topuni.png' %}" alt="Top Universität Auszeichnung" style="max-width: 150px; margin-bottom: 1.5rem;">
+    <p class="lead">Unsere Studierenden geben uns fünf Sterne</p>
+    <p class="h4 mb-3">⭐⭐⭐⭐⭐</p>
+    <p class="lead">Die International University CALM ist in zahlreichen Portalen zur „TOP Universität" gekürt worden.</p>
+</div>
+
+{% endblock %}

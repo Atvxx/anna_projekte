@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Danke{% endblock %}
+{% block content %}
+{% load static %}
+
+
+<div class="container py-5">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+      <img src="{% static 'img/students.jpg' %}" alt="Kontaktanfrage eingegangen" class="img-fluid rounded-4 shadow" style="max-width: 600px;">
+    </div>
+    <div class="col-lg-6 text-lg-start text-center">
+      <h1 class="fw-bold mb-3" style="color: #0d3766; font-size: 3rem;">
+        Vielen Dank<br>für Ihre Bewerbung!
+      </h1>
+
+<p>Ihre Bewerbung wurde erfolgreich gespeichert.</p>
+<p><strong>Bewerbungs-Code:</strong> {{ code }}</p>
+<p>Bitte notieren Sie diesen Code, um den <a href="{% url 'status_check' %}?code={{ code }}">Status Ihrer Bewerbung</a> zu prüfen.</p>
+{% endblock %}

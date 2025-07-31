@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Status prüfen{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/custombutton.css' %}">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
+                        Online-Bewerbung
+                    </h2>
+                    <p class="text-center text-muted mb-4">
+                        Geben Sie Ihren Statuscode ein, um den aktuellen Stand Ihrer Bewerbung zu sehen.
+                    </p>
+                    <form method="get" action="">
+                        <input type="text" name="code" placeholder="Bewerbungs-Code" class="form-control form-control-lg" value="{{ code|default:'' }}">
+                        <button type="submit" class="btn btn-custom btn-sm mt-2 w-100">
+                            <i class="bi bi-search"></i> Status anzeigen
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if bewerbung %}
+    <p><strong>Status:</strong> {{ bewerbung.status }}</p>
+    <p><strong>Name:</strong> {{ bewerbung.vorname }} {{ bewerbung.nachname }}</p>
+    <p><strong>Studiengang:</strong> {{ bewerbung.studiengang }}</p>
+{% elif code %}
+    <p style="color:red;">Kein Eintrag mit diesem Code gefunden.</p>
+{% endif %}
+{% endblock %}

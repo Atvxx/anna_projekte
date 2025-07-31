@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Statuscode anfordern{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/custombutton.css' %}">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
+                
+                    </h2>
+                    <p class="text-center text-muted mb-4">
+                        Geben Sie Ihre E-Mail-Adresse <b>und Ihr Geburtsdatum</b> ein, um Ihren Statuscode zu erhalten.
+                    </p>
+                    <form method="post" class="d-grid gap-3">
+                        {% csrf_token %}
+                        <input type="email" name="email" class="form-control form-control-lg" placeholder="E-Mail-Adresse" required>
+                        <input type="date" name="geburtsdatum" class="form-control form-control-lg" placeholder="Geburtsdatum" required>
+                        <button type="submit" class="btn btn-custom btn-sm mt-2 w-100">
+                            <i class="bi bi-envelope"></i> Statuscode anfordern
+                        </button>
+                    </form>
+             {% if success %}
+                    <p style="color:green;">Statuscode wurde per E-Mail gesendet.</p>
+            {% elif error %}
+                    <p style="color:red;">{{ error }}</p>
+            {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
