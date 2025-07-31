@@ -1,0 +1,50 @@
+/* einheitliches Blau*/
+.kontakt-title {
+    color: #003056;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.kontakt-subtitle {
+    color: #003056;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.kontakt-info-title {
+    color: #003056;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+/* für Ansprechpartner-Box */
+.kontakt-ansprechpartner-title {
+    color: #003056;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.text-hinweis {
+    color: #003056;
+    font-weight: 800;
+}
+
+/* absenden Button anpassen */
+.btn-custom.btn-sm {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid #003056;
+    color: #003056;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+/* hover-Effekt für absenden button */
+.btn-custom.btn-sm:hover {
+    background-color: #003056;
+    color: white;
+    transform: translateY(-2px);
+}

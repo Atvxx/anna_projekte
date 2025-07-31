@@ -1,0 +1,25 @@
+/* Für Bewerbung, Statuscode versenden und status check */
+/* Teile mit Copilot generiert */
+.btn-custom.btn-sm {
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #003056;
+    color: #003056;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 8px;
+    width: 100%;           
+}
+
+.btn-custom:hover.btn-sm {
+    background-color: #003056;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,48,86,0.1);
+}
