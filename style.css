@@ -1,0 +1,34 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background-color: white;  /* oder die Farbe Ihrer Seite */
+  width: 100%;
+}
+.navbar-nav .nav-link {
+    color: #003056 !important;
+    font-weight: 500;
+}
+
+.navbar-toggler {
+    border-color: #003056;
+}
+
+/* Schriftart für Paragraphen */
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    /* Optionale Verbesserungen */
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* generiert mit Copilot */
+/* Bessere Lesbarkeit auf großen Bildschirmen */
+@media (min-width: 768px) {
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
